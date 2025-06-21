@@ -13,8 +13,8 @@ Some features are complete, while others are being implemented.
 
 ## 📦 Planned Features
 
-- ✉️ Submit anonymous whistleblower reports ✅
-- 🔐 AES-256 encryption for data security ✅
+- ✉️ Submit anonymous whistleblower reports 
+- 🔐 AES-256 encryption for data security 
 - 🧠 AI chatbot integration using OpenAI API (in progress)
 - 👮 Admin dashboard APIs for reviewing reports (in progress)
 - 📁 Encrypted file upload support (planned)
