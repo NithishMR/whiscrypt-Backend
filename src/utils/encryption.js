@@ -1,10 +1,15 @@
 import crypto from "crypto";
-
+import dotenv from "dotenv";
+dotenv.config();
 const ALGORITHM = "aes-256-cbc";
 const SECRET_KEY = process.env.AES_SECRET_KEY;
 const IV_LENGTH = 16;
 
 export const encrypt = (text) => {
+  // console.log(SECRET_KEY);
+  // if (!SECRET_KEY) throw new Error("AES_SECRET_KEY env variable not set");
+
+  if (!text) throw new Error("Nothing to encrypt");
   const iv = crypto.randomBytes(IV_LENGTH);
   const cipher = crypto.createCipheriv(
     ALGORITHM,
