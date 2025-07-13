@@ -45,13 +45,6 @@ export const adminLogin = async (req, res) => {
       return res.status(401).json({ error: "Invalid credentials" });
     }
     console.log("admin details: ", user);
-    //  for testing
-    // const testPassword = "123";
-    // const storedHash =
-    //   "$2b$10$UlhUpJUXXVmmZzCs7WjNmuZpRCGvRr1PkJI5UBsFkMwkf5scGA9du";
-    // // Compare passwords
-    // const matching = await bcrypt.compare(testPassword, storedHash);
-    // console.log("Manual check: ", matching);
     const isMatch = await bcrypt.compare(password, user.password);
     console.log("is match", isMatch);
     if (user.role !== "admin") {

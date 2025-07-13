@@ -14,8 +14,8 @@ const router = express.Router();
 
 router.get("/users", authMiddleware, adminMiddleware, getAllUsers);
 router.delete("/user/:userId", authMiddleware, adminMiddleware, deleteUser);
-router.get("/reports", getAllReports);
-router.get("/reports/:id", getReport);
+router.get("/reports", authMiddleware, getAllReports);
+router.get("/reports/:id", authMiddleware, getReport);
 router.post("/register", adminRegister);
 router.post("/login", adminLogin);
 export default router;
